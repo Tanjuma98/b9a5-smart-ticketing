@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,70 @@
     </style>
 </head>
 <body>
-    
+    <header class="px-8 raleway-font">
+        <!-- navbar section starts here -->
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Destination</a></li>
+                      <li><a>Search</a></li>
+                    </ul>
+                  </div>
+              <a class="btn btn-ghost font-bold text-xl lg:text-3xl">Smart Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-lg text-gray-500">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
+              </div>
+            <div class="navbar-end">
+              <a class="btn btn-outline btn-success px-5 text-xl font-bold bg-slate-100
+              ">Bus <span><img src="./images/bus-icon.png" alt=""></span></a>
+            </div>
+          </div>
+          <!-- navbar section ends here -->
+          <!-- banner section starts here -->
+          <div class="flex items-center justify-center inter-font bg-center bg-[url('./images/banner.png')] bg-no-repeat h-[550px]">
+            <div class="space-y-7 text-center">
+                <h3 class="text-white text-5xl font-bold">End-to-End Travel with <br> <span class="text-success">S. Transport</span></h3>
+                <p class="w-3/4 mx-auto text-lg text-white">From traveling on foot we have come a long way and different means of traveling have to lead to a vast network. The types of transportation in existence now are Land Transport, Railways, Water Transport, Air Transport or Aviation and Space Travel.</p>
+                <a href="#s-transport" class="btn btn-success btn-xs sm:btn-sm md:btn-md lg:btn-lg">Buy Tickets</a>
+            </div>
+          </div>
+          <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:-translate-y-1/2">
+            <div class="flex items-center justify-center gap-4 w-72 bg-white border-b-2 border-success drop-shadow-lg rounded-2xl p-4">
+                <img src="./images/people.png" alt="">
+                <div>
+                    <h3 class="font-bold text-black text-3xl">500k+</h3>
+                    <p class="text-lg text-gray-500">Registered Users</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-center gap-4 w-72 bg-white border-b-2 border-success drop-shadow-lg rounded-2xl p-4">
+                <img src="./images/ticket-cupon.png" alt="">
+                <div>
+                    <h3 class="font-bold text-black text-3xl">1.7 lacks</h3>
+                    <p class="text-lg text-gray-500">Tickets Sold</p>
+                </div>
+            </div>
+            <div class="flex items-center justify-center gap-4 w-72 bg-white border-b-2 border-success drop-shadow-lg rounded-2xl p-4">
+                <img src="./images/stoppage.png" alt="">
+                <div>
+                    <h3 class="font-bold text-black text-3xl">80K+</h3>
+                    <p class="text-lg text-gray-500">Rental Partners</p>
+                </div>
+            </div>
+          </div>
+          <!-- banner section ends here -->
+    </header>
+    <script src="./js/index.js"></script>
 </body>
 </html>
