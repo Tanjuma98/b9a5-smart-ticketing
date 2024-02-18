@@ -8,3 +8,8 @@ function getValueByElementId(id){
     const value = parseInt(elementId.innerText);
     return value;
 }
+
+function getSeatNumberByElementId(seatName){
+    const seatNumber = document.getElementById(seatName);
+    return seatNumber;
+}

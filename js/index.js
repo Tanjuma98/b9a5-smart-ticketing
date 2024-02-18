@@ -17,10 +17,9 @@ for (const seat of seats) {
             const seatName = seat.innerText;
             const seatInfoContainer = document.getElementById('seat-info');
             const span = document.createElement('span');
-            span.classList.add('seat-details');
             span.classList.add('flex');
             span.classList.add('justify-between')
-            span.innerHTML = `<p>${seatName}</p> <p>Business</p> <p>550</p>`;
+            span.innerHTML = `<p id="seat-name">${seatName}</p> <p>Business</p> <p>550</p>`;
             seatInfoContainer.appendChild(span);
 
             // updating total price after selecting a seat
@@ -36,9 +35,6 @@ for (const seat of seats) {
             const availableSeats = getValueByElementId('available-seats');
             const updatedAvailableSeats = availableSeats - 1;
             setValueByElementId('available-seats', updatedAvailableSeats);
-
-            // Next button will be enabled if at least a seat is selected
-            document.getElementById('btn-next').removeAttribute('disabled');
 
             // removing click event for the selected seat 
             seat.removeEventListener('click', addSeat);
@@ -80,4 +76,14 @@ document.getElementById('btn-apply').addEventListener('click', function(){
         couponField.value = '';
     }
     setValueByElementId('grand-total', totalPrice-discount);
+})
+
+// Next button will be enabled if at least a seat is selected and the length of phone number input field will be greater than 0.
+document.getElementById('phone').addEventListener('input', function(event){
+    const phoneNumber = event.target.value.length;
+    const seatName = document.getElementById('seat-name').innerText;
+    const seatNumber = getSeatNumberByElementId(seatName);
+    if(seatNumber.classList.contains('bg-success') && phoneNumber > 0){
+        document.getElementById('btn-next').removeAttribute('disabled');
+    }
 })
